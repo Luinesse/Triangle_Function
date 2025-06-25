@@ -9,10 +9,12 @@ using namespace std;
 
 int gDegree = 0;
 
+// 총알 관리를 위한 클래스
 class Bullet {
 public:
     float x;
     float y;
+    // 원의 중점을 움직이기 위한 변수
     float vx, vy;
 public:
     Bullet(float x, float y, float vx, float vy) {
@@ -23,6 +25,7 @@ public:
     }
 };
 
+// 총알 관리를 위한 벡터 컨테이너
 vector<shared_ptr<Bullet>> vBullets;
 
 // 각도를 호도법으로 변경
