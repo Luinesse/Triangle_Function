@@ -1,9 +1,9 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\629-12\\Desktop\\winAPI\\DrawCircle\\",
+  "WorkspaceRootPath": "D:\\winAPI\\DrawCircle\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{2197780D-16C2-473C-9F66-363B7CA5A141}|DrawCircle\\DrawCircle.vcxproj|C:\\Users\\629-12\\Desktop\\winAPI\\DrawCircle\\DrawCircle\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{2197780D-16C2-473C-9F66-363B7CA5A141}|DrawCircle\\DrawCircle.vcxproj|D:\\winAPI\\DrawCircle\\DrawCircle\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{2197780D-16C2-473C-9F66-363B7CA5A141}|DrawCircle\\DrawCircle.vcxproj|solutionrelative:DrawCircle\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
@@ -20,11 +20,11 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "main.cpp",
-              "DocumentMoniker": "C:\\Users\\629-12\\Desktop\\winAPI\\DrawCircle\\DrawCircle\\main.cpp",
+              "DocumentMoniker": "D:\\winAPI\\DrawCircle\\DrawCircle\\main.cpp",
               "RelativeDocumentMoniker": "DrawCircle\\main.cpp",
-              "ToolTip": "C:\\Users\\629-12\\Desktop\\winAPI\\DrawCircle\\DrawCircle\\main.cpp",
-              "RelativeToolTip": "DrawCircle\\main.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAApAAAAAAAAAA==",
+              "ToolTip": "D:\\winAPI\\DrawCircle\\DrawCircle\\main.cpp*",
+              "RelativeToolTip": "DrawCircle\\main.cpp*",
+              "ViewState": "AgIAAH4AAAAAAAAAAAAAAJcAAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-06-12T09:37:29.644Z",
               "EditorCaption": ""

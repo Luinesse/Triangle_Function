@@ -2,8 +2,9 @@
 #include <math.h>
 #include <iostream>
 #include <vector>
-#define PI 3.14
-#define SPEED 5.0f
+#define PI 3.14                     // PI
+#define SPEED 10.0f                 // 총알의 속도
+#define Acceleration -0.3f          // 총알의 가속도
 
 using namespace std;
 
@@ -139,6 +140,27 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam) 
         for (auto& it : vBullets) {
             it->x += it->vx;
             it->y += it->vy;
+
+            // 현재 총알의 속력을 구한다. (속력은 각 방향 성분의 제곱의 합의 제곱근으로 구할 수 있다.)
+            // 따라서, 피타고라스 정리로 구함.
+            float prevSpeed = sqrt(it->vx * it->vx + it->vy * it->vy);
+
+            // 만일, 속도가 0.0f 이상으로 운동중이라면 ?
+            if (prevSpeed > 0.0f) {
+                // 감속된 속도를 구한다.
+                float curSpeed = prevSpeed + Acceleration;
+                // 감속된 속도가 0.0f보다 아래로 내려간다면 0.0f로 클램핑.
+                if (curSpeed < 0.0f) curSpeed = 0.0f;
+
+                // vx와 vy는 방향벡터에 속도 스칼라값을 곱하여 만들어짐.
+                // 따라서, 그 속도 값을 현재 감속 이전의 속도값으로 나누어 줌으로써 정규화함.
+                // 즉, 방향만 가지게 된다.
+                float dirX = it->vx / prevSpeed;
+                float dirY = it->vy / prevSpeed;
+                // 그리고, 정규화 된 방향벡터에 감속된 속도를 다시 곱하여 감속된 속도를 적용한다.
+                it->vx = dirX * curSpeed;
+                it->vy = dirY * curSpeed;
+            }
         }
 
         // 총알이 화면밖으로 나간다면 벡터에서 그 값을 삭제.
